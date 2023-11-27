@@ -1,3 +1,76 @@
-.page-content{
+body{
+    width: 100%;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
 
+.page-content{
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap:10px;
+    background-color: rgb(255, 230, 125);
+    border: 5px solid green;
+  
+
+    
+}
+
+.nav-bar{
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(139, 2, 2);
+    width: 100vw;
+}
+
+.restPara{
+    font-size: 20px;
+}
+
+.restaurantRightSide{
+   display:flex;
+    flex-direction: column;
+    border-bottom: none;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.restaurantLeftSide{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50%;
+}
+
+
+/* Menu css*/
+
+.menu-page-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
+.main-dish-content{
+    flex-direction: column;
+    display: flex;
+        justify-content: center;
+}
+
+.mainDishes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dish{
+    border: 3px solid green;
+    padding: 5px;
 }

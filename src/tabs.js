@@ -1,3 +1,4 @@
+import createContactPage from "./contact";
 import createMenuPage from "./menu";
 import createRestaurantHomePage from "./restaurant";
 
@@ -6,19 +7,30 @@ import createRestaurantHomePage from "./restaurant";
 const createTabs = () => {
     const content = document.querySelector('#content');
 
+    const nav = document.createElement('nav');
+    const navRight = document.createElement('div');
+    const icon = document.createElement('i');
     const div1 = document.createElement('div');
     const div2 = document.createElement('div');
     const div3 = document.createElement('div');
+
+    //apply classes
+    nav.classList.add('nav-bar');
+    icon.classList.add('fa-solid', 'fa-apple-whole');
+    
 
     //set text content
     div1.textContent = "Home";
     div2.textContent = "menu";
     div3.textContent = "Contact";
 
-    //append them to content
-    content.appendChild(div1);
-    content.appendChild(div2);
-    content.appendChild(div3);
+    //append
+    content.appendChild(nav);
+    navRight.appendChild(div1);
+    navRight.appendChild(div2);
+    navRight.appendChild(div3);
+    nav.appendChild(icon);
+    nav.appendChild(navRight);
 
     //add eventListeners
     div1.addEventListener('click', () =>{
@@ -31,7 +43,7 @@ const createTabs = () => {
     });
         div3.addEventListener('click', () =>{
         clearContent();
-        createMenuPage();
+        createContactPage();
     });
 
 }
